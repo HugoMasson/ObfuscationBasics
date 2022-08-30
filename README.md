@@ -11,5 +11,5 @@ To run open a terminal
 Type 'python encrypter.py -[e/d] -[algoName] [fileName.extention] [key]'
 
 [e/d]       : encrypt | decrypt
-[algoName]  : caesar  | XOR
+[algoName]  : caesar  | xor
 [key]       : int     | 8bits
