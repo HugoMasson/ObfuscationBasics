@@ -81,6 +81,7 @@ def caesarCipher(arr, encrypt):
 
 #not optimised at all just wanted to work with arrays
 def xorCipherEncry(arr):
+	print(arr)
 	if len(arr[1]) != 8:
 		raise Exception("for Xor you have to use a 8 bit key e.g '01010101'")
 	text = getFileAsString(arr[0])
@@ -123,11 +124,12 @@ def encypt(arr):
 
 def decrypt(arr):
 	v = arr[0]
-	arr[2] = -int(arr[2])
 	if v == "-caesar":
+		arr[2] = -int(arr[2])
 		overrideFile(arr[1], caesarCipher(arr[1:], -26))
 	elif v == "-xor":
-		overrideFile(arr[1],xorCipherEncry(arr[1:]))
+		print(arr)
+		overrideFile(arr[1], xorCipherEncry(arr[1:]))
 	else:
 		l = ""
 		for key in USABLE:
